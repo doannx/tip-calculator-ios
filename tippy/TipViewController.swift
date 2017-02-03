@@ -42,6 +42,12 @@ class TipViewController: UIViewController {
         tipControl.selectedSegmentIndex = TipUtils.getTipIndex(NSUserDefaults.standardUserDefaults().loadTipPercent())
         // re-calculate
         calculateAndUpdateGui()
+        // animated
+        UIView.animateWithDuration(4.0, animations: {
+            self.tipControl.center.y = 135
+            self.tipLabel.alpha += 1
+            self.totalLabel.alpha += 1
+        })
     }
     
     @IBAction func onTap(sender: AnyObject) {

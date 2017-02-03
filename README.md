@@ -1,13 +1,55 @@
-I# tip-calculator-ios
-iOS Pre-work: Tip Calculator App
+Pre-work - *Tip Calculator App*
 
-This pre-work incorporates the following steps (and my progress so far):
+**tippy** is a tip calculator application for iOS.
 
-1. Setup Xcode :white_check_mark:
-2. Familiarize yourself with Swift :white_check_mark:
-3. Build the initial Tip Calculator :white_check_mark:
-4. Add a Settings Screen to the Tip Calculator
-5. Submit your app for review via GitHub
-6. Extend your app, improve UI, add features
+Submitted by: **Nguyen Xuan Doan**
 
-The time I spent until now: 2h
+Time spent: **4** hours spent in total
+
+## User Stories
+
+The following **required** functionality is complete:
+
+* [x] User can enter a bill amount, choose a tip percentage, and see the tip and total values.
+* [x] Settings page to change the default tip percentage.
+
+The following **optional** features are implemented:
+* [x] UI animations
+* [ ] Remembering the bill amount across app restarts (if <10mins): **IN PROGRESS**.
+* [ ] Using locale-specific currency and currency thousands separators: **IN PROGRESS**.
+* [x] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
+
+The following **additional** features are implemented:
+
+- [x] Friendly UI.
+
+## Video Walkthrough 
+
+Here's a walkthrough of implemented user stories:
+
+![Video Walkthrough](tippy.gif)
+
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
+
+## Notes
+
+The challenges encountered while building the app:  
+1. Beginner in iOS programming as well as mobile development.  
+2. Make friend with the most "stupid" IDE: Xcode, that says NO with refactor (for Swift)/format code/reference search...
+3. The LaunchScreen.storyboard still can not work after a couple researching hours.
+
+## License
+
+    Copyright [2017] [doannx]
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.

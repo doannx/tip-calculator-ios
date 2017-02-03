@@ -35,7 +35,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 The challenges encountered while building the app:  
 1. Beginner in iOS programming as well as mobile development.  
-2. Make friend with the most "stupid" IDE: Xcode, that says NO with refactor (for Swift)/format code/reference search...
+2. Make friend with the most "stupid" IDE: Xcode, that says NO with refactor (for Swift)/format code/reference search...  
 3. The LaunchScreen.storyboard still can not work after a couple researching hours.
 
 ## License

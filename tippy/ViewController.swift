@@ -18,6 +18,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        // setup for GUI
+        billField.contentVerticalAlignment = UIControlContentVerticalAlignment.Bottom
+        self.navigationController?.navigationBar.barTintColor = UIColor(red:0.03, green:0.85, blue:0.56, alpha:1.0)
+        self.navigationController?.navigationBar.tintColor = UIColor(red:0.03, green:0.85, blue:0.56, alpha:1.0)
+        // set default focus on [billField]
+        billField.becomeFirstResponder();
     }
 
     override func didReceiveMemoryWarning() {

@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		52B9AD051E444EF5005CBB3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B9AD041E444EF5005CBB3B /* AppDelegate.swift */; };
-		52B9AD071E444EF5005CBB3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B9AD061E444EF5005CBB3B /* ViewController.swift */; };
+		52B9AD071E444EF5005CBB3B /* TipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B9AD061E444EF5005CBB3B /* TipViewController.swift */; };
 		52B9AD0A1E444EF5005CBB3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B9AD081E444EF5005CBB3B /* Main.storyboard */; };
 		52B9AD0C1E444EF6005CBB3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52B9AD0B1E444EF6005CBB3B /* Assets.xcassets */; };
 		52B9AD0F1E444EF6005CBB3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B9AD0D1E444EF6005CBB3B /* LaunchScreen.storyboard */; };
 		52B9AD1A1E444EF6005CBB3B /* tippyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B9AD191E444EF6005CBB3B /* tippyTests.swift */; };
 		52B9AD251E444EF6005CBB3B /* tippyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B9AD241E444EF6005CBB3B /* tippyUITests.swift */; };
+		52B9AD331E4482EF005CBB3B /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B9AD321E4482EF005CBB3B /* SettingViewController.swift */; };
+		52B9AD351E448873005CBB3B /* TipUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B9AD341E448873005CBB3B /* TipUtils.swift */; };
+		52B9AD391E4488C1005CBB3B /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B9AD381E4488C1005CBB3B /* PersistenceService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,7 @@
 /* Begin PBXFileReference section */
 		52B9AD011E444EF5005CBB3B /* tippy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tippy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B9AD041E444EF5005CBB3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		52B9AD061E444EF5005CBB3B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		52B9AD061E444EF5005CBB3B /* TipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipViewController.swift; sourceTree = "<group>"; };
 		52B9AD091E444EF5005CBB3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52B9AD0B1E444EF6005CBB3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52B9AD0E1E444EF6005CBB3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +50,9 @@
 		52B9AD201E444EF6005CBB3B /* tippyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tippyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B9AD241E444EF6005CBB3B /* tippyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tippyUITests.swift; sourceTree = "<group>"; };
 		52B9AD261E444EF6005CBB3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52B9AD321E4482EF005CBB3B /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		52B9AD341E448873005CBB3B /* TipUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipUtils.swift; sourceTree = "<group>"; };
+		52B9AD381E4488C1005CBB3B /* PersistenceService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +104,11 @@
 			isa = PBXGroup;
 			children = (
 				52B9AD041E444EF5005CBB3B /* AppDelegate.swift */,
-				52B9AD061E444EF5005CBB3B /* ViewController.swift */,
+				52B9AD061E444EF5005CBB3B /* TipViewController.swift */,
+				52B9AD321E4482EF005CBB3B /* SettingViewController.swift */,
 				52B9AD081E444EF5005CBB3B /* Main.storyboard */,
+				52B9AD341E448873005CBB3B /* TipUtils.swift */,
+				52B9AD381E4488C1005CBB3B /* PersistenceService.swift */,
 				52B9AD0B1E444EF6005CBB3B /* Assets.xcassets */,
 				52B9AD0D1E444EF6005CBB3B /* LaunchScreen.storyboard */,
 				52B9AD101E444EF6005CBB3B /* Info.plist */,
@@ -259,8 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52B9AD071E444EF5005CBB3B /* ViewController.swift in Sources */,
+				52B9AD391E4488C1005CBB3B /* PersistenceService.swift in Sources */,
+				52B9AD071E444EF5005CBB3B /* TipViewController.swift in Sources */,
 				52B9AD051E444EF5005CBB3B /* AppDelegate.swift in Sources */,
+				52B9AD331E4482EF005CBB3B /* SettingViewController.swift in Sources */,
+				52B9AD351E448873005CBB3B /* TipUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +497,7 @@
 				52B9AD2B1E444EF6005CBB3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		52B9AD2C1E444EF6005CBB3B /* Build configuration list for PBXNativeTarget "tippyTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +506,7 @@
 				52B9AD2E1E444EF6005CBB3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		52B9AD2F1E444EF6005CBB3B /* Build configuration list for PBXNativeTarget "tippyUITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +515,7 @@
 				52B9AD311E444EF6005CBB3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

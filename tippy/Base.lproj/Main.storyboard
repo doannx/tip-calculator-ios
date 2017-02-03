@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--Tip Calculator-->
+        <!--Tabber-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tippy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TipViewController" customModule="tippy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,7 +71,13 @@
                             <outletCollection property="gestureRecognizers" destination="FOZ-dW-38q" appends="YES" id="tH2-CH-I2Y"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Tip Calculator" id="7ZA-ru-Xar"/>
+                    <navigationItem key="navigationItem" title="Tabber" id="7ZA-ru-Xar">
+                        <barButtonItem key="rightBarButtonItem" image="setting" id="2Fp-X5-pcQ">
+                            <connections>
+                                <segue destination="aBk-Lx-2wj" kind="push" id="0Zq-Bh-PET"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="billField" destination="UXx-Or-Y6n" id="duh-NC-M2x"/>
                         <outlet property="tipControl" destination="7aF-7K-F5X" id="Xt4-ln-yWd"/>
@@ -87,6 +93,53 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="764" y="316"/>
+        </scene>
+        <!--Set Default Tip-->
+        <scene sceneID="NgS-w4-NIC">
+            <objects>
+                <viewController storyboardIdentifier="settingViewController" id="aBk-Lx-2wj" customClass="SettingViewController" customModule="tippy" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="52e-eM-qjp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="1Je-1m-yAe">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1764705882" green="0.75686274509999996" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="separatorColor" red="0.21176470589999999" green="0.79607843140000001" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <color key="sectionIndexBackgroundColor" red="0.1764705882" green="0.75686274509999996" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="cellTip" textLabel="u5w-Pv-tQZ" style="IBUITableViewCellStyleDefault" id="1WU-0d-sAf">
+                                        <rect key="frame" x="0.0" y="113.5" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1WU-0d-sAf" id="3Lf-73-DDy">
+                                            <rect key="frame" x="0.0" y="0.0" width="281" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="u5w-Pv-tQZ">
+                                                    <rect key="frame" x="15" y="0.0" width="266" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Set Default Tip" id="kqu-9L-lkb"/>
+                    <connections>
+                        <outlet property="tblDefaultTip" destination="1Je-1m-yAe" id="0tx-hr-CQY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AqU-1Y-7Ru" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1161" y="316"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZCv-Pv-vg4">
@@ -107,4 +160,7 @@
             <point key="canvasLocation" x="232" y="316"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="setting" width="25" height="25"/>
+    </resources>
 </document>

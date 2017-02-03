@@ -10,4 +10,4 @@ This pre-work incorporates the following steps (and my progress so far):
 5. Submit your app for review via GitHub
 6. Extend your app, improve UI, add features
 
-The time I spent until now: 1h
+The time I spent until now: 2h

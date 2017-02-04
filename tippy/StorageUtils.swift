@@ -8,8 +8,12 @@
 
 import Foundation
 
-private let TIP_KEY = "tipPercent"
-private let TIP_DEFAULT_VALUE = 15
+private let TIP_KEY:String = "tipPercent"
+private let TIP_DEFAULT_VALUE:Int = 15
+
+private let TIME_OUT = 600
+private let BILL_KEY:String = "billAmount"
+private let LAST_ACTIVE_KEY:String = "lastActive"
 
 extension NSUserDefaults {
     
@@ -31,5 +35,27 @@ extension NSUserDefaults {
             return NSUserDefaults.standardUserDefaults().integerForKey(TIP_KEY);
         }
         return TIP_DEFAULT_VALUE
+    }
+    
+    func loadBillAmount() -> String {
+        let lastActive = NSUserDefaults.standardUserDefaults().integerForKey(LAST_ACTIVE_KEY)
+        let now = NSDate()
+        
+        if(Int(now.timeIntervalSince1970) - lastActive <= TIME_OUT) {
+            return NSUserDefaults.standardUserDefaults().stringForKey(BILL_KEY)!
+        }
+        return ""
+    }
+    
+    func saveBillAmount(lastBillAmount:String) {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(lastBillAmount, forKey: BILL_KEY)
+        
+        let date = NSDate()
+        let timeSecond = Int(date.timeIntervalSince1970)
+        
+        defaults.setInteger(timeSecond, forKey: LAST_ACTIVE_KEY)
+        
+        defaults.synchronize()
     }
 }

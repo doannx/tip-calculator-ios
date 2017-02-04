@@ -19,7 +19,7 @@ class TipViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         // setup for GUI
-        billField.contentVerticalAlignment = UIControlContentVerticalAlignment.Bottom
+        // billField.contentVerticalAlignment = UIControlContentVerticalAlignment.Bottom
         self.navigationController?.navigationBar.barTintColor = UIColor(red:0.03, green:0.85, blue:0.56, alpha:1.0)
         self.navigationController?.navigationBar.tintColor = UIColor(red:0.03, green:0.85, blue:0.56, alpha:1.0)
         // set default focus on [billField]
@@ -40,6 +40,8 @@ class TipViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         // load default tip value
         tipControl.selectedSegmentIndex = TipUtils.getTipIndex(NSUserDefaults.standardUserDefaults().loadTipPercent())
+        // load bill amount of last time
+        billField.text = NSUserDefaults.standardUserDefaults().loadBillAmount()
         // re-calculate
         calculateAndUpdateGui()
         // animated
@@ -48,6 +50,10 @@ class TipViewController: UIViewController {
             self.tipLabel.alpha += 1
             self.totalLabel.alpha += 1
         })
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        NSUserDefaults.standardUserDefaults().saveBillAmount(billField.text!)
     }
     
     @IBAction func onTap(sender: AnyObject) {

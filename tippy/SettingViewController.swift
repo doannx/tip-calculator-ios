@@ -21,14 +21,17 @@ class SettingViewController: UIViewController, UITableViewDataSource, UITableVie
         
         self.tblTheme.dataSource = self
         self.tblTheme.delegate = self
-        
-        updateTheme()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        updateTheme()
+    }
+
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1

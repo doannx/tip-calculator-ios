@@ -56,16 +56,24 @@ class TipUtils: NSObject {
         return TIP_PERCENTAGE_VALUES.indexOf(tipValue)! ?? 0
     }
     
-    static func formatCurrencyByLocalization(number:Double) -> String {
+    /**
+     Format currency value by current locale.
+     @param amount.
+     @return Formatted string.
+     */
+    static func formatCurrencyByLocalization(amount:Double) -> String {
         let formatter = NSNumberFormatter()
         formatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
         formatter.locale = NSLocale.currentLocale()
         
-        return formatter.stringFromNumber(number)!
+        return formatter.stringFromNumber(amount)!
     }
     
+    /**
+     Return currency symbol by current locale.
+     @return Currency symbol.
+     */
     static func getCurrencySymbol() -> String {
-        let locale = NSLocale.currentLocale()
-        return String(locale.objectForKey(NSLocaleCurrencySymbol)!)
+        return String(NSLocale.currentLocale().objectForKey(NSLocaleCurrencySymbol)!)
     }
 }

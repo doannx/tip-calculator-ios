@@ -94,7 +94,7 @@
             </objects>
             <point key="canvasLocation" x="764" y="316"/>
         </scene>
-        <!--Set Default Tip-->
+        <!--Settings-->
         <scene sceneID="NgS-w4-NIC">
             <objects>
                 <viewController storyboardIdentifier="settingViewController" id="aBk-Lx-2wj" customClass="SettingViewController" customModule="tippy" sceneMemberID="viewController">
@@ -154,7 +154,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Set Default Tip" id="kqu-9L-lkb"/>
+                    <navigationItem key="navigationItem" title="Settings" id="kqu-9L-lkb"/>
                     <connections>
                         <outlet property="tblDefaultTip" destination="1Je-1m-yAe" id="0tx-hr-CQY"/>
                         <outlet property="tblTheme" destination="u89-Mz-Kul" id="9NT-RD-S07"/>

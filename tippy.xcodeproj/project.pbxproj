@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5293B3B61E45A03A00F317AE /* ThemeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5293B3B51E45A03A00F317AE /* ThemeUtils.swift */; };
 		52B9AD051E444EF5005CBB3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B9AD041E444EF5005CBB3B /* AppDelegate.swift */; };
 		52B9AD071E444EF5005CBB3B /* TipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B9AD061E444EF5005CBB3B /* TipViewController.swift */; };
 		52B9AD0A1E444EF5005CBB3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B9AD081E444EF5005CBB3B /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5293B3B51E45A03A00F317AE /* ThemeUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeUtils.swift; sourceTree = "<group>"; };
 		52B9AD011E444EF5005CBB3B /* tippy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tippy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B9AD041E444EF5005CBB3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52B9AD061E444EF5005CBB3B /* TipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				52B9AD321E4482EF005CBB3B /* SettingViewController.swift */,
 				52B9AD081E444EF5005CBB3B /* Main.storyboard */,
 				52B9AD341E448873005CBB3B /* TipUtils.swift */,
+				5293B3B51E45A03A00F317AE /* ThemeUtils.swift */,
 				52B9AD381E4488C1005CBB3B /* StorageUtils.swift */,
 				52B9AD0B1E444EF6005CBB3B /* Assets.xcassets */,
 				52B9AD0D1E444EF6005CBB3B /* LaunchScreen.storyboard */,
@@ -271,6 +274,7 @@
 				52B9AD391E4488C1005CBB3B /* StorageUtils.swift in Sources */,
 				52B9AD071E444EF5005CBB3B /* TipViewController.swift in Sources */,
 				52B9AD051E444EF5005CBB3B /* AppDelegate.swift in Sources */,
+				5293B3B61E45A03A00F317AE /* ThemeUtils.swift in Sources */,
 				52B9AD331E4482EF005CBB3B /* SettingViewController.swift in Sources */,
 				52B9AD351E448873005CBB3B /* TipUtils.swift in Sources */,
 			);

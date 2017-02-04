@@ -8,6 +8,9 @@
 
 import Foundation
 
+private let THEME_KEY:String = "theme"
+private let THEME_DEFAULT_VALUE:Int = 1
+
 private let TIP_KEY:String = "tipPercent"
 private let TIP_DEFAULT_VALUE:Int = 15
 
@@ -58,4 +61,25 @@ extension NSUserDefaults {
         
         defaults.synchronize()
     }
+    
+    /**
+     Save the selected theme.
+     @param themeId.
+     @return void.
+     */
+    func saveSelectedTheme(themeId:Int) {
+        NSUserDefaults.standardUserDefaults().setInteger(themeId, forKey: THEME_KEY)
+    }
+    
+    /**
+     Load the saved theme.
+     @return Saved theme id.
+     */
+    func loadTheme() -> Int {
+        if let _ = NSUserDefaults.standardUserDefaults().objectForKey(THEME_KEY) {
+            return NSUserDefaults.standardUserDefaults().integerForKey(THEME_KEY);
+        }
+        return THEME_DEFAULT_VALUE
+    }
+
 }

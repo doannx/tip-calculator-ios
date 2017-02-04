@@ -14,14 +14,14 @@ class TipViewController: UIViewController {
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
+    @IBOutlet weak var viewHeader: UIView!
+    @IBOutlet weak var viewFooter: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         // setup for GUI
-        // billField.contentVerticalAlignment = UIControlContentVerticalAlignment.Bottom
-        self.navigationController?.navigationBar.barTintColor = UIColor(red:0.03, green:0.85, blue:0.56, alpha:1.0)
-        self.navigationController?.navigationBar.tintColor = UIColor(red:0.03, green:0.85, blue:0.56, alpha:1.0)
+        updateTheme()
         // set default focus on [billField]
         billField.becomeFirstResponder();
         // set currency symbol on [billField]
@@ -44,6 +44,8 @@ class TipViewController: UIViewController {
         billField.text = NSUserDefaults.standardUserDefaults().loadBillAmount()
         // re-calculate
         calculateAndUpdateGui()
+        // update theme
+        updateTheme()
         // animated
         UIView.animateWithDuration(4.0, animations: {
             self.tipControl.center.y = 135
@@ -68,11 +70,44 @@ class TipViewController: UIViewController {
         calculateAndUpdateGui()
     }
     
-    private func calculateAndUpdateGui(){
+    private func calculateAndUpdateGui() {
         let bill = Double(billField.text!) ?? 0
         let tipPercent = Double(TipUtils.getTipValue(tipControl.selectedSegmentIndex)) * 0.01
         tipLabel.text = TipUtils.formatCurrencyByLocalization(TipUtils.calculateTipAmount(bill, tipPercent: tipPercent))
         totalLabel.text = TipUtils.formatCurrencyByLocalization(TipUtils.calculateTotalAmount(bill, tipPercent: tipPercent))
+    }
+    
+    private func updateTheme() {
+        let themeId = NSUserDefaults.standardUserDefaults().loadTheme()
+        
+        let headerColor: UIColor
+        let navigationColor: UIColor
+        let footerColor: UIColor
+        let foreColor: UIColor
+        
+        if(themeId == 0){
+            headerColor = UIColor(red:0.89, green:0.95, blue:0.99, alpha:1.0)
+            navigationColor = UIColor(red:0.13, green:0.59, blue:0.95, alpha:1.0)
+            footerColor = UIColor(red:0.73, green:0.87, blue:0.98, alpha:1.0)
+            foreColor = UIColor(red:0.05, green:0.28, blue:0.63, alpha:1.0)
+        } else {
+            headerColor = UIColor(red:0.93, green:0.94, blue:0.95, alpha:1.0)
+            navigationColor = UIColor(red:0.38, green:0.49, blue:0.55, alpha:1.0)
+            footerColor = UIColor(red:0.81, green:0.85, blue:0.86, alpha:1.0)
+            foreColor = UIColor(red:0.15, green:0.20, blue:0.22, alpha:1.0)
+        }
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
+        self.navigationController?.navigationBar.barTintColor = navigationColor
+        
+        self.viewHeader.backgroundColor = headerColor
+        self.billField.backgroundColor = headerColor
+        self.viewFooter.backgroundColor = footerColor
+        
+        self.tipLabel.textColor = foreColor
+        self.totalLabel.textColor = foreColor
+        self.billField.textColor = foreColor
+        self.tipControl.tintColor = foreColor
     }
 }
 

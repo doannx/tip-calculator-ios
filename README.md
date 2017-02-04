@@ -4,7 +4,7 @@ Pre-work - *Tip Calculator App*
 
 Submitted by: **Nguyen Xuan Doan**
 
-Time spent: **7** hours spent in total
+Time spent: **8** hours spent in total
 
 ## User Stories
 
@@ -23,6 +23,7 @@ The following **additional** features are implemented:
 
 - [x] Friendly UI.
 - [x] User can set the light/dark color theme in the settings view.
+- [x] Display launch screen with appicon.
 
 ## Video Walkthrough 
 
@@ -37,7 +38,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 The challenges encountered while building the app:  
 1. Beginner in iOS programming as well as mobile development.  
 2. Make friend with the most "stupid" IDE: Xcode, that says NO with refactor (for Swift)/format code/reference search...  
-3. The LaunchScreen.storyboard still can not work after a couple researching hours.
+3. The layout is broken when rotating the phone T.T
 
 ## License
 

@@ -44,13 +44,14 @@ class TipViewController: UIViewController {
         billField.text = NSUserDefaults.standardUserDefaults().loadBillAmount()
         // re-calculate
         calculateAndUpdateGui()
-        // update theme
-        updateTheme()
+
         // animated
-        UIView.animateWithDuration(4.0, animations: {
+        UIView.animateWithDuration(5.0, animations: {
             self.tipControl.center.y = 135
             self.tipLabel.alpha += 1
             self.totalLabel.alpha += 1
+            // update theme
+            self.updateTheme()
         })
     }
     

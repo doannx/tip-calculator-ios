@@ -15,8 +15,6 @@ class TipViewController: UIViewController {
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
     
-    private var DISPLAY_VALUE_PATTERN = "$%.2f"
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -26,6 +24,8 @@ class TipViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = UIColor(red:0.03, green:0.85, blue:0.56, alpha:1.0)
         // set default focus on [billField]
         billField.becomeFirstResponder();
+        // set currency symbol on [billField]
+        billField.placeholder = TipUtils.getCurrencySymbol()
         // set title for segments
         for (index, element) in TipUtils.TIP_PERCENTAGE_VALUES.enumerate() {
             tipControl.setTitle(String(element), forSegmentAtIndex: index)
@@ -65,11 +65,8 @@ class TipViewController: UIViewController {
     private func calculateAndUpdateGui(){
         let bill = Double(billField.text!) ?? 0
         let tipPercent = Double(TipUtils.getTipValue(tipControl.selectedSegmentIndex)) * 0.01
-        let tip = TipUtils.calculateTipAmount(bill, tipPercent: tipPercent)
-        let total = TipUtils.calculateTotalAmount(bill, tipPercent: tipPercent)
-        
-        tipLabel.text = String(format: DISPLAY_VALUE_PATTERN, tip)
-        totalLabel.text = String(format: DISPLAY_VALUE_PATTERN, total)
+        tipLabel.text = TipUtils.formatCurrencyByLocalization(TipUtils.calculateTipAmount(bill, tipPercent: tipPercent))
+        totalLabel.text = TipUtils.formatCurrencyByLocalization(TipUtils.calculateTotalAmount(bill, tipPercent: tipPercent))
     }
 }
 

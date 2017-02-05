@@ -4,7 +4,7 @@ Pre-work - *Tip Calculator App*
 
 Submitted by: **Nguyen Xuan Doan**
 
-Time spent: **8** hours spent in total
+Time spent: **10** hours spent in total
 
 ## User Stories
 
@@ -24,6 +24,7 @@ The following **additional** features are implemented:
 - [x] Friendly UI.
 - [x] User can set the light/dark color theme in the settings view.
 - [x] Display launch screen with appicon.
+- [x] Adapt with different screen sizes (iPhone 4s-5-6).
 
 ## Video Walkthrough 
 
@@ -38,7 +39,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 The challenges encountered while building the app:  
 1. Beginner in iOS programming as well as mobile development.  
 2. Make friend with the most "stupid" IDE: Xcode, that says NO with refactor (for Swift)/format code/reference search...  
-3. The layout is broken when rotating the phone (I found out that StackView & AutoLayout can apply for this kind of problem) :sweat:
+3. The layout is broken when rotating the phone (I found out that StackView & AutoLayout can apply for this kind of problem, tried but still not work as expected) :sweat:
 
 ## License
 

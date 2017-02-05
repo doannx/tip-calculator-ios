@@ -38,7 +38,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 The challenges encountered while building the app:  
 1. Beginner in iOS programming as well as mobile development.  
 2. Make friend with the most "stupid" IDE: Xcode, that says NO with refactor (for Swift)/format code/reference search...  
-3. The layout is broken when rotating the phone (I found out that StackView & AutoLayout can apply for this kind of problem) :sweat:
+3. The layout is broken when rotating the phone or running on different screen sizes (I found out that StackView & AutoLayout can apply for this kind of problem) :sweat:
 
 ## License
 

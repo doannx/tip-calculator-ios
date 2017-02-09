@@ -27,7 +27,7 @@ class TipViewController: UIViewController {
         // set currency symbol on [billField]
         billField.placeholder = TipUtils.getCurrencySymbol()
         // set title for segments
-        for (index, element) in TipUtils.TIP_PERCENTAGE_VALUES.enumerate() {
+        for (index, element) in Const.Tip_Values.enumerate() {
             tipControl.setTitle(String(element), forSegmentAtIndex: index)
         }
     }

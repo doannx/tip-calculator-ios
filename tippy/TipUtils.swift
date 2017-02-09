@@ -10,8 +10,6 @@ import Foundation
 
 class TipUtils: NSObject {
     
-    static let TIP_PERCENTAGE_VALUES = [15, 20, 25]
-    
     enum TIP_PERCENTAGE_ENUM: Double {
         case MIN = 0.15
         case MID = 0.2
@@ -44,7 +42,7 @@ class TipUtils: NSObject {
      @return Tip value.
      */
     static func getTipValue(tipIndex:Int) -> Int {
-        return TIP_PERCENTAGE_VALUES[tipIndex] ?? TIP_PERCENTAGE_VALUES[0]
+        return Const.Tip_Values[tipIndex] ?? Const.Tip_Values[0]
     }
     
     /**
@@ -53,7 +51,7 @@ class TipUtils: NSObject {
      @return Tip index.
      */
     static func getTipIndex(tipValue:Int) -> Int {
-        return TIP_PERCENTAGE_VALUES.indexOf(tipValue)! ?? 0
+        return Const.Tip_Values.indexOf(tipValue)! ?? 0
     }
     
     /**

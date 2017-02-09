@@ -57,6 +57,8 @@ class SettingViewController: UIViewController, UITableViewDataSource, UITableVie
         var cell:UITableViewCell?
         
         if tableView == self.tblDefaultTip {
+            print(indexPath.row)
+            print(TipUtils.getTipValue(indexPath.row))
             cell = tableView.dequeueReusableCellWithIdentifier("cellTip")
             let tipPercent = NSUserDefaults.standardUserDefaults().loadTipPercent()
             let tipIndex = TipUtils.getTipIndex(tipPercent)

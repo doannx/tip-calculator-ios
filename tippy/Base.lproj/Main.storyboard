@@ -186,6 +186,7 @@
                             <constraint firstItem="u89-Mz-Kul" firstAttribute="width" secondItem="1Je-1m-yAe" secondAttribute="width" id="XeO-j3-SsD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1Je-1m-yAe" secondAttribute="trailing" constant="-20" id="ekv-mi-rad"/>
                             <constraint firstItem="up5-QU-pPi" firstAttribute="top" secondItem="u89-Mz-Kul" secondAttribute="bottom" id="h2O-l9-0o8"/>
+                            <constraint firstItem="u89-Mz-Kul" firstAttribute="top" secondItem="1Je-1m-yAe" secondAttribute="bottom" constant="-1" id="p5S-jp-Cey"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="kqu-9L-lkb"/>

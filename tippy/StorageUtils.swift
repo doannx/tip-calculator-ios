@@ -8,16 +8,6 @@
 
 import Foundation
 
-private let THEME_KEY:String = "theme"
-private let THEME_DEFAULT_VALUE:Int = 1
-
-private let TIP_KEY:String = "tipPercent"
-private let TIP_DEFAULT_VALUE:Int = 15
-
-private let TIME_OUT = 600
-private let BILL_KEY:String = "billAmount"
-private let LAST_ACTIVE_KEY:String = "lastActive"
-
 extension NSUserDefaults {
     
     /**
@@ -26,7 +16,7 @@ extension NSUserDefaults {
      @return void.
      */
     func saveTipPercent(tipPercent:Int) {
-        NSUserDefaults.standardUserDefaults().setInteger(tipPercent, forKey: TIP_KEY)
+        NSUserDefaults.standardUserDefaults().setInteger(tipPercent, forKey: Const.Tip_Key)
     }
     
     /**
@@ -34,30 +24,30 @@ extension NSUserDefaults {
      @return Saved tip value.
      */
     func loadTipPercent() -> Int {
-        if let _ = NSUserDefaults.standardUserDefaults().objectForKey(TIP_KEY) {
-            return NSUserDefaults.standardUserDefaults().integerForKey(TIP_KEY);
+        if let _ = NSUserDefaults.standardUserDefaults().objectForKey(Const.Tip_Key) {
+            return NSUserDefaults.standardUserDefaults().integerForKey(Const.Tip_Key);
         }
-        return TIP_DEFAULT_VALUE
+        return Const.Tip_Default_Value
     }
     
     func loadBillAmount() -> String {
-        let lastActive = NSUserDefaults.standardUserDefaults().integerForKey(LAST_ACTIVE_KEY)
+        let lastActive = NSUserDefaults.standardUserDefaults().integerForKey(Const.Last_Active_Key)
         let now = NSDate()
         
-        if(Int(now.timeIntervalSince1970) - lastActive <= TIME_OUT) {
-            return NSUserDefaults.standardUserDefaults().stringForKey(BILL_KEY)!
+        if(Int(now.timeIntervalSince1970) - lastActive <= Const.Time_Out_Value) {
+            return NSUserDefaults.standardUserDefaults().stringForKey(Const.Bill_Key)!
         }
         return ""
     }
     
     func saveBillAmount(lastBillAmount:String) {
         let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setObject(lastBillAmount, forKey: BILL_KEY)
+        defaults.setObject(lastBillAmount, forKey: Const.Bill_Key)
         
         let date = NSDate()
         let timeSecond = Int(date.timeIntervalSince1970)
         
-        defaults.setInteger(timeSecond, forKey: LAST_ACTIVE_KEY)
+        defaults.setInteger(timeSecond, forKey: Const.Last_Active_Key)
         
         defaults.synchronize()
     }
@@ -68,7 +58,7 @@ extension NSUserDefaults {
      @return void.
      */
     func saveSelectedTheme(themeId:Int) {
-        NSUserDefaults.standardUserDefaults().setInteger(themeId, forKey: THEME_KEY)
+        NSUserDefaults.standardUserDefaults().setInteger(themeId, forKey: Const.Theme_Key)
     }
     
     /**
@@ -76,10 +66,10 @@ extension NSUserDefaults {
      @return Saved theme id.
      */
     func loadTheme() -> Int {
-        if let _ = NSUserDefaults.standardUserDefaults().objectForKey(THEME_KEY) {
-            return NSUserDefaults.standardUserDefaults().integerForKey(THEME_KEY);
+        if let _ = NSUserDefaults.standardUserDefaults().objectForKey(Const.Theme_Key) {
+            return NSUserDefaults.standardUserDefaults().integerForKey(Const.Theme_Key);
         }
-        return THEME_DEFAULT_VALUE
+        return Const.Theme_Default_Value
     }
 
 }

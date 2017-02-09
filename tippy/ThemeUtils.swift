@@ -9,16 +9,14 @@
 import Foundation
 
 class ThemeUtils: NSObject {
-    
-    static let THEME_VALUES = ["DARK", "LIGHT"]
-    
+
     /**
      Get theme name based on index.
      @param themeId.
      @return Theme Name.
      */
     static func getThemeName(themeId:Int) -> String {
-        return THEME_VALUES[themeId] ?? THEME_VALUES[0]
+        return Const.Theme_Values[themeId] ?? Const.Theme_Values[0]
     }
     
     /**
@@ -27,7 +25,7 @@ class ThemeUtils: NSObject {
      @return Theme Id.
      */
     static func getThemeId(themeName:String) -> Int {
-        return THEME_VALUES.indexOf(themeName)! ?? 0
+        return Const.Theme_Values.indexOf(themeName)! ?? 0
     }
     
 }
